@@ -5,7 +5,7 @@ const socket = io(SERVER_URL, {
   reconnection: true,
   reconnectionDelay: 200,
   reconnectionDelayMax: 1000,
-}, transports: ['polling', 'websocket']);
+}, {transports: ['polling', 'websocket']});
 
 export async function getTickets(EVENT, func) {
   socket.emit('start');
